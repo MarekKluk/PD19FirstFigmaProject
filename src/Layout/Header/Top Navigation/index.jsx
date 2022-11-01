@@ -1,16 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from '../../../styles.module.css';
-import { linkPaths } from "../../../LinksPaths";
-import { Button } from "@mui/material";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from '../../../styles.module.css'
+import { linkPaths } from '../../../LinksPaths'
+import { Button } from '@mui/material'
 
-export function TopNavigationBar() {
+export function TopNavigationBar () {
   return (
     <div className={styles.topNavigationBar}>
       <Link to={linkPaths.home}>
-        <Button variant ="text">
-          <p>BOOKIFY</p>
-        </Button>
+       <p>BOOKIFY</p>
       </Link>
       <div className={styles.topNavigationBarLinksWrapper}>
         <Link to={linkPaths.about}>
@@ -35,5 +33,5 @@ export function TopNavigationBar() {
         </Link>
       </div>
     </div>
-  );
+  )
 }

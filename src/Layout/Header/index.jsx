@@ -1,12 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from '../../styles.module.css';
-import {TopNavigationBar} from "./Top Navigation";
+import React from 'react'
+import styles from '../../styles.module.css'
+import { TopNavigationBar } from './Top Navigation'
+import { SearchBox } from './Search Box'
 
-export function Header() {
+export function Header () {
   return (
     <div className={styles.header}>
       <TopNavigationBar />
+      <SearchBox />
     </div>
-  );
+  )
 }

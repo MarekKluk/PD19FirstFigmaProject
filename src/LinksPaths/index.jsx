@@ -1,4 +1,4 @@
-export const linkPaths= {
+export const linkPaths = {
   home: '/',
   about: '/about',
   favourites: '/your-favourites',
