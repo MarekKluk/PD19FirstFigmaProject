@@ -5,7 +5,7 @@ import Autocomplete from '@mui/material/Autocomplete'
 
 export function SearchBox () {
   return (
-    <div className={styles.topNavigationBar}>
+    <div className={styles.searchBox}>
       <p>Find your place and experience it together</p>
       <div className={styles.searchMachine}>
         <Autocomplete
@@ -13,7 +13,7 @@ export function SearchBox () {
           id="combo-box-demo"
           options={localisations}
           sx={autocompleteStyling}
-          renderInput={(params) => <TextField {...params} />}
+          renderInput={(params) => <TextField {...params} label="Movie" />}
         />
       </div>
     </div>
@@ -25,8 +25,7 @@ const localisations = [
 ]
 const autocompleteStyling = {
   width: 220,
-  gap: 10,
   height: 48,
-  borderRadius: 180,
+  borderRadius: 2,
   placeholder: 'localization'
 }
