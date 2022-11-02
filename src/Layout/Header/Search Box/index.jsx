@@ -1,18 +1,30 @@
 import React from 'react'
 import styles from '../../../styles.module.css'
-import TextField from '@mui/material/TextField'
-import Autocomplete from '@mui/material/Autocomplete'
+import { Input } from '../../../shared/components/StyledInput'
+import SearchIcon from '@mui/icons-material/Search'
+import {TextField} from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
 
 export function SearchBox () {
   return (
     <div className={styles.searchBox}>
       <p>Find your place and experience it together</p>
       <div className={styles.searchMachine}>
+        <Input
+          autocompleteProps={{
+            disablePortal: true,
+            id: 'combo-box-demo',
+            options: localisations,
+            sx: autocompleteStyling
+          }}
+          autocomplete
+          icon={<SearchIcon />}
+        />
         <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={localisations}
-          sx={autocompleteStyling}
+          sx={{ width: 300 }}
           renderInput={(params) => <TextField {...params} label="Movie" />}
         />
       </div>
