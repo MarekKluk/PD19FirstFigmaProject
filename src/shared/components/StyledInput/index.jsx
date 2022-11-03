@@ -6,7 +6,9 @@ import { InputAdornment } from '@mui/material'
 
 const StyledAutocomplete = styled(Autocomplete)(() => ({
   '& .MuiInputBase-root': {
-    borderRadius: '18px'
+    borderRadius: '18px',
+    height: 48,
+    width: 220
   }
 }))
 
@@ -18,21 +20,17 @@ export function Input (props) {
         renderInput={(params) => (
             <TextField
               {...params}
-              label="Combo box"
+              label={props.labelName}
               variant="outlined"
               fullWidth
               InputProps={{
                 ...params.InputProps,
-                startAdornment: (
-                  <InputAdornment position="end">
-                    {props.icon}
-                  </InputAdornment>
-                )
+                startAdornment: (<InputAdornment position="end">{props.icon}</InputAdornment>)
               }}
             />
-          )
+        )
         }
       />
     )
-  };
+  }
 }

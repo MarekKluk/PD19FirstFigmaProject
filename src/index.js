@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import { Layout } from './Layout'
 import { ThemeProvider } from '@mui/material/styles'
-import theme from './shared/styles/theme'
+import { theme } from './shared/styles/theme'
 
 export function FirstFigmaProject () {
   return (
