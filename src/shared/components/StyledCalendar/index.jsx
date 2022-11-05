@@ -6,6 +6,7 @@ export const StyledDataRangePicker = styled(DateRangePicker)(() => ({
   '& .MuiInputBase-root': {
     borderRadius: '18px',
     height: 48,
-    width: 110
+    width: 110,
+    background: 'white'
   }
 }))

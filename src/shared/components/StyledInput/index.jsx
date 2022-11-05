@@ -8,7 +8,8 @@ const StyledAutocomplete = styled(Autocomplete)(() => ({
   '& .MuiInputBase-root': {
     borderRadius: '18px',
     height: 48,
-    width: 220
+    width: 220,
+    background: 'white'
   }
 }))
 
