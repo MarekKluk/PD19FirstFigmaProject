@@ -3,6 +3,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.VenuesCardsPage {
+  margin: 0 auto;
+  width: 1440px;
+  height: 4020px;
+  background: #FFFFFF;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -110,4 +116,36 @@ code {
   width: 220px;
   height: 40px;
   margin-top: 44px;
+}
+.venuesPicturesList {
+  width: 894px;
+  height: 1467px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.filterList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FDFDFD;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 282px;
+  height: 2818px;
+}
+.filtersResetWrap {
+  width: 282px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  background: #F8F5F1
+}
+.filtersAndVenuesWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 40px;
+
 }
