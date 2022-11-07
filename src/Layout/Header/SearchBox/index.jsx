@@ -8,13 +8,13 @@ import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs'
 import { StyledDataRangePicker } from '../../../shared/components/StyledCalendar'
 import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
-import { faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker'
 
 export function SearchBox () {
   const [value, setValue] = React.useState([null, null])
-  let [count, setCount] = useState(null)
+  const [count, setCount] = useState(null)
 
-  const incrementCounter = () => setCount(count + 1);
+  const incrementCounter = () => setCount(count + 1)
 
   const decrementCounter = () => setCount(count - 1)
 
@@ -92,12 +92,12 @@ export function SearchBox () {
 }
 
 function generateLocalizations (amountOfLocalizations) {
-  let generatedLocalizations = [];
-  for (let i=0; i <= amountOfLocalizations; i++) {
+  const generatedLocalizations = []
+  for (let i = 0; i <= amountOfLocalizations; i++) {
     generatedLocalizations.push(
-      {label: faker.address.city()}
+      { label: faker.address.city() }
     )
   }
-  return generatedLocalizations;
+  return generatedLocalizations
 }
 const options = generateLocalizations(100)

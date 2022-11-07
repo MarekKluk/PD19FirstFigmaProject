@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import { VenuesList } from './VenuesList'
 import { Pagination } from '@mui/material'
 import { usePagination } from './Pagination'
-import { FilterList } from "./FilterList";
+import { FilterList } from './FilterList'
 
 const venuesUrl = 'http://localhost:3000/venues'
 const photosURL = 'https://jsonplaceholder.typicode.com/photos'

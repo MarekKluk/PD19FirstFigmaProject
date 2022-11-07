@@ -23,6 +23,6 @@ module.exports = {
     'max-lines-per-function': [1, 40],
     'import/prefer-default-export': 'off',
     'no-plusplus': 'off',
-    'react/prop-types': 'off',
+    'react/prop-types': 'off'
   }
 }

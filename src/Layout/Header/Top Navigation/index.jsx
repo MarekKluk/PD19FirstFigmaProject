@@ -8,9 +8,9 @@ const links = [
   { label: 'about us', path: linkPaths.about },
   { label: 'your favourites', path: linkPaths.favourites },
   { label: 'login', path: linkPaths.login }
-    ]
+]
 
-export function TopNavigationBar() {
+export function TopNavigationBar () {
   return (
     <div className={styles.topNavigationBar}>
       <Link to={linkPaths.home}>
@@ -27,5 +27,5 @@ export function TopNavigationBar() {
         }
       </div>
     </div>
-  );
+  )
 }
