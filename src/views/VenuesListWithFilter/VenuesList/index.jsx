@@ -1,6 +1,6 @@
 import React from 'react'
 import { Venue } from './Venue'
-import styles from '../../../styles.module.css'
+import styles from './styles.module.css'
 
 export function VenuesList ({ venues, photos }) {
   return (

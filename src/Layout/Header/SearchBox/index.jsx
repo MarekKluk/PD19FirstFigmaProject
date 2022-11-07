@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../../../styles.module.css'
+import styles from './styles.module.css'
 import { Input } from '../../../shared/components/StyledInput'
 import SearchIcon from '@mui/icons-material/Search'
 import { IconButton, InputBase, Paper, TextField } from '@mui/material'
@@ -8,22 +8,15 @@ import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs'
 import { StyledDataRangePicker } from '../../../shared/components/StyledCalendar'
 import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
+import { faker } from '@faker-js/faker';
 
 export function SearchBox () {
   const [value, setValue] = React.useState([null, null])
   let [count, setCount] = useState(null)
 
-  const incrementCounter = () => {
-    count++
-    setCount(count)
-  }
-  const decrementCounter = () => {
-    if (count <= 0) {
-      return
-    }
-    count--
-    setCount(count)
-  }
+  const incrementCounter = () => setCount(count + 1);
+
+  const decrementCounter = () => setCount(count - 1)
 
   return (
     <div className={styles.searchBox}>
@@ -67,10 +60,10 @@ export function SearchBox () {
                 setValue(newValue)
               }}
               renderInput={(startProps, endProps) => (
-                <React.Fragment>
+                <>
                   <TextField {...startProps} />
                   <TextField {...endProps} />
-                </React.Fragment>
+                </>
               )}
             />
         </LocalizationProvider>
@@ -98,7 +91,13 @@ export function SearchBox () {
   )
 }
 
-const options = [
-  { label: 'dupa' },
-  { label: 'dupa2' }
-]
+function generateLocalizations (amountOfLocalizations) {
+  let generatedLocalizations = [];
+  for (let i=0; i <= amountOfLocalizations; i++) {
+    generatedLocalizations.push(
+      {label: faker.address.city()}
+    )
+  }
+  return generatedLocalizations;
+}
+const options = generateLocalizations(100)

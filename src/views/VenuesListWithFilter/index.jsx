@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../../styles.module.css'
+import styles from './styles.module.css'
 import { VenuesList } from './VenuesList'
 import { Pagination } from '@mui/material'
 import { usePagination } from './Pagination'
