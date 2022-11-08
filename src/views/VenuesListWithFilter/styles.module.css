@@ -5,3 +5,36 @@
     justify-content: space-evenly;
     margin-top: 40px;
 }
+.venuesListWithPagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.displayAmountOfVenuesAndResetButton {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.displayAmountOfVenuesAndResetButton p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.sortButton {
+    background: none;
+    border: none;
+    width: 34px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #67AA92;
+    cursor: pointer;
+    margin-right: 100px;
+}

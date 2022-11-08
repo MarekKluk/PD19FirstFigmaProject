@@ -6,7 +6,7 @@
     height: 524px;
     background-color: #FDFDFD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-image: url("../../../shared/imgs/background.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
+    background-image: url("../../../shared/imgs/together.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
     background-position: left bottom, top, center ;
     background-repeat: no-repeat, no-repeat, no-repeat;
 }

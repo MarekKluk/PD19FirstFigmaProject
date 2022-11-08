@@ -14,6 +14,7 @@ export function VenuesListWithFilter () {
   const [currentPage, setCurrentPage] = useState(1)
   const [venuesPerPage] = useState(18)
   let [currentVenues] = useState(null)
+  const [currencyExchange, setCurrencyExchange] = useState(null)
 
   useEffect(() => {
     fetch(venuesUrl)
@@ -28,6 +29,14 @@ export function VenuesListWithFilter () {
         setPhotos(sortPhotosByAlbums(dataArray))
       })
   }, [])
+
+  useEffect(() => {
+    fetch('http://api.exchangeratesapi.io/v1/latest?access_key=hhq2fnF5kWjK6fOnOrGG8oxO6xQQTh0M')
+      .then((res) => res.json())
+      .then(setCurrencyExchange)
+  }, [])
+
+  console.log(currencyExchange)
 
   const sortPhotosByAlbums = (photosArray) => {
     const photoAndHisAlbumPair = {}
@@ -49,19 +58,24 @@ export function VenuesListWithFilter () {
     const indexOfFirstVenue = indexOfLastVenue - venuesPerPage
     currentVenues = venues.slice(indexOfFirstVenue, indexOfLastVenue)
   }
+
   return (
     <div className={styles.filtersAndVenuesWrap}>
       <FilterList />
       { venues && photos
-        ? <VenuesList venues={currentVenues} photos={photos} />
-        : 'Loading' }
-      {venues
-        ? <Pagination
-        count={Math.ceil(venues.length / venuesPerPage)}
-        page={currentPage}
-        onChange={handleChange}
+        ? <div className={styles.venuesListWithPagination}>
+          <div className={styles.displayAmountOfVenuesAndResetButton}>
+            <p>show {currentVenues.length} on the page</p>
+            <button className={styles.sortButton}>sort</button>
+          </div>
+        <VenuesList venues={currentVenues} photos={photos} />
+        <Pagination
+          count={Math.ceil(venues.length / venuesPerPage)}
+          page={currentPage}
+          onChange={handleChange}
         />
-        : 'Loading'}
+        </div>
+        : 'Loading' }
     </div>
   )
 }
