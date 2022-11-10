@@ -9,9 +9,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 .displayAmountOfVenuesAndResetButton {
-    width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

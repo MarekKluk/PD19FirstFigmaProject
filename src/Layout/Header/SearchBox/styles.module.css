@@ -1,9 +1,11 @@
 .searchBox {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 524px;
+    flex-wrap: wrap;
+    min-height: 524px;
     background-color: #FDFDFD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-image: url("../../../shared/imgs/together.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
@@ -15,15 +17,13 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 0px;
     gap: 25px;
-    width: 1200px;
-    height: 48px;
+    width: 100%;
 }
 
 .welcomeText {
-    margin-left: 450px;
-    margin-top: 150px;
     font-family: 'Prompt', sans-serif;
     font-style: normal;
     font-weight: 500;

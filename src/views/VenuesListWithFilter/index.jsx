@@ -31,13 +31,16 @@ export function VenuesListWithFilter () {
   }, [])
 
   useEffect(() => {
-    fetch('http://api.exchangeratesapi.io/v1/latest?access_key=hhq2fnF5kWjK6fOnOrGG8oxO6xQQTh0M')
+    fetch('https://api.apilayer.com/currency_data/convert?base=USD&symbols=EUR,GBP,JPY&amount=5&date=2018-01-01',
+      {
+        headers: {
+          apikey: 'DtbpehV28fDVm4s3sLtJl3vWCAcH8cZU'
+        }
+      })
       .then((res) => res.json())
       .then(setCurrencyExchange)
   }, [])
-
-  console.log(currencyExchange)
-
+console.log(currencyExchange);
   const sortPhotosByAlbums = (photosArray) => {
     const photoAndHisAlbumPair = {}
     photosArray.forEach(

@@ -13,8 +13,8 @@ export function FirstFigmaProject () {
   return (
     <ThemeProvider theme={theme}>
       <Router> {/* eslint-disable-line */}
-        <main className={styles.VenuesCardsPage}>
           <Layout>
+            <VenuesListWithFilter />
             {/* <Routes> */}
             {/*  <Route path='/' element={<Home />} > </Route> /!* eslint-disable-line *!/ */}
             {/*  <Route path={ticTacToePath} element={<TicTacToeGame />} layout={Layout}> </Route> */}
@@ -26,8 +26,6 @@ export function FirstFigmaProject () {
             {/*  <Route path={toDoListPath} element={<ToDoListApp />} layout={Layout}> </Route> */}
             {/* </Routes> */}
           </Layout>
-          <VenuesListWithFilter />
-        </main>
       </Router>
     </ThemeProvider>
   )

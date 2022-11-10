@@ -1,6 +1,6 @@
 .venuesPicturesList {
-    width: 894px;
-    height: 1467px;
+    max-width: 894px;
+    max-height: 1467px;
     gap: 10px;
     display: flex;
     flex-wrap: wrap;
