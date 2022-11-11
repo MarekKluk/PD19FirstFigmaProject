@@ -7,6 +7,7 @@ import { Button } from '@mui/material'
 const links = [
   { label: 'about us', path: linkPaths.about },
   { label: 'your favourites', path: linkPaths.favourites },
+  { label: 'start hosting', path: linkPaths.hosting },
   { label: 'login', path: linkPaths.login }
 ]
 function uuidv4 () {

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 import { VenuesList } from './VenuesList'
 import { Pagination } from '@mui/material'
-import { usePagination } from './Pagination'
 import { FilterList } from './FilterList'
 
 const venuesUrl = 'http://localhost:3000/venues'
@@ -12,15 +11,21 @@ export function VenuesListWithFilter () {
   const [venues, setVenues] = useState(null)
   const [photos, setPhotos] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
+  const [amountOfPages, setAmountOfPages] = useState(null)
   const [venuesPerPage] = useState(18)
-  let [currentVenues] = useState(null)
   const [currencyExchange, setCurrencyExchange] = useState(null)
 
+
   useEffect(() => {
-    fetch(venuesUrl)
-      .then((res) => res.json())
-      .then(setVenues)
-  }, [])
+    async function fetchVenues() {
+      const response = await fetch(`${venuesUrl}?_page=${currentPage}&_limit=18`);
+      const venuesArray = await response.json();
+      setVenues(venuesArray);
+      setAmountOfPages(response.headers.get('X-Total-Count'))
+    }
+    fetchVenues()
+      .catch(console.error);
+  }, [currentPage])
 
   useEffect(() => {
     fetch(photosURL)
@@ -40,7 +45,7 @@ export function VenuesListWithFilter () {
       .then((res) => res.json())
       .then(setCurrencyExchange)
   }, [])
-console.log(currencyExchange);
+
   const sortPhotosByAlbums = (photosArray) => {
     const photoAndHisAlbumPair = {}
     photosArray.forEach(
@@ -53,13 +58,6 @@ console.log(currencyExchange);
 
   const handleChange = (event, pageNumber) => {
     setCurrentPage(pageNumber)
-    usePagination(venues, venuesPerPage).jump(pageNumber)
-  }
-
-  if (venues) {
-    const indexOfLastVenue = currentPage * venuesPerPage
-    const indexOfFirstVenue = indexOfLastVenue - venuesPerPage
-    currentVenues = venues.slice(indexOfFirstVenue, indexOfLastVenue)
   }
 
   return (
@@ -68,12 +66,12 @@ console.log(currencyExchange);
       { venues && photos
         ? <div className={styles.venuesListWithPagination}>
           <div className={styles.displayAmountOfVenuesAndResetButton}>
-            <p>show {currentVenues.length} on the page</p>
+            <p>show {venues.length} on the page</p>
             <button className={styles.sortButton}>sort</button>
           </div>
-        <VenuesList venues={currentVenues} photos={photos} />
+        <VenuesList venues={venues} photos={photos} />
         <Pagination
-          count={Math.ceil(venues.length / venuesPerPage)}
+          count={Math.ceil(amountOfPages/venuesPerPage)}
           page={currentPage}
           onChange={handleChange}
         />

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import PlaceIcon from '@mui/icons-material/Place'
-import StarBorderIcon from '@mui/icons-material/StarBorder'
+import StarIcon from '@mui/icons-material/Star';
 import GroupIcon from '@mui/icons-material/Group'
 
 export function Venue ({ venue, photo }) {
@@ -27,12 +27,14 @@ export function Venue ({ venue, photo }) {
         </div>
         <div className={styles.ratingAndCapacityContainer}>
           <div className={styles.ratingWithIcon}>
-            <StarBorderIcon />
-            <p>rating {venue.rating}</p>
+            <StarIcon />
+            <span>rating</span>
+            <p>{venue.rating}</p>
           </div>
           <div className={styles.capacityWithIcon}>
             <GroupIcon />
-            <p>capacity {venue.capacity}</p>
+            <span>capacity</span>
+            <p>{venue.capacity}</p>
           </div>
         </div>
       </div>

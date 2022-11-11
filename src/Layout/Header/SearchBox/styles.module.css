@@ -6,21 +6,21 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 524px;
-    background-color: #FDFDFD;
+    background-color: #F8F5F1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-image: url("../../../shared/imgs/together.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
     background-position: left bottom, top, center ;
     background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 300px, contain, contain;
 }
 
 .searchMachine {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     padding: 0px;
     gap: 25px;
-    width: 100%;
 }
 
 .welcomeText {
@@ -32,7 +32,6 @@
     color: rgba(0, 0, 0, 0.75);
 }
 .narrowSearchButton {
-    font-family: 'Poppins', sans-serif;
     color: #67AA92;
     font-weight: 600;
     font-size: 16px;
@@ -49,7 +48,6 @@
     justify-content: center;
     align-items: center;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 16px;
