@@ -5,35 +5,30 @@ import { Pagination } from '@mui/material'
 import { FilterList } from './FilterList'
 
 const venuesUrl = 'http://localhost:3000/venues'
-const photosURL = 'https://jsonplaceholder.typicode.com/photos'
 
 export function VenuesListWithFilter () {
   const [venues, setVenues] = useState(null)
-  const [photos, setPhotos] = useState(null)
+  const [venuesCache, setVenuesCache] = useState({})
   const [currentPage, setCurrentPage] = useState(1)
-  const [amountOfPages, setAmountOfPages] = useState(null)
-  const [venuesPerPage] = useState(18)
+  const [amountOfVenues, setAmountOfVenues] = useState(null)
+  const [venuesPerPage, setVenuesPerPage] = useState(18)
   const [currencyExchange, setCurrencyExchange] = useState(null)
 
-
   useEffect(() => {
-    async function fetchVenues() {
-      const response = await fetch(`${venuesUrl}?_page=${currentPage}&_limit=18`);
-      const venuesArray = await response.json();
-      setVenues(venuesArray);
-      setAmountOfPages(response.headers.get('X-Total-Count'))
+    if (currentPage in venuesCache) {
+      setVenues(venuesCache[currentPage])
+      return
+    }
+    async function fetchVenues () {
+      const response = await fetch(`${venuesUrl}?_page=${currentPage}&_limit=${venuesPerPage}`)
+      const venuesArray = await response.json()
+      setAmountOfVenues(response.headers.get('X-Total-Count'))
+      setVenues(venuesArray)
+      setVenuesCache(({ ...venuesCache, [currentPage]: venuesArray }))
     }
     fetchVenues()
-      .catch(console.error);
-  }, [currentPage])
-
-  useEffect(() => {
-    fetch(photosURL)
-      .then((res) => res.json())
-      .then(dataArray => {
-        setPhotos(sortPhotosByAlbums(dataArray))
-      })
-  }, [])
+      .catch(console.error)
+  }, [currentPage, venuesPerPage])
 
   useEffect(() => {
     fetch('https://api.apilayer.com/currency_data/convert?base=USD&symbols=EUR,GBP,JPY&amount=5&date=2018-01-01',
@@ -46,34 +41,30 @@ export function VenuesListWithFilter () {
       .then(setCurrencyExchange)
   }, [])
 
-  const sortPhotosByAlbums = (photosArray) => {
-    const photoAndHisAlbumPair = {}
-    photosArray.forEach(
-      photo => {
-        photoAndHisAlbumPair[photo.albumId] = photo
-      }
-    )
-    return photoAndHisAlbumPair
-  }
-
-  const handleChange = (event, pageNumber) => {
-    setCurrentPage(pageNumber)
+  const handlePageChanging = (event, pageNumber) => setCurrentPage(pageNumber)
+  const handleAmountOfVenuesOnPageChange = (event) => {
+    setVenuesPerPage(event.target.value)
+    setVenuesCache({})
   }
 
   return (
     <div className={styles.filtersAndVenuesWrap}>
       <FilterList />
-      { venues && photos
+      { venues
         ? <div className={styles.venuesListWithPagination}>
           <div className={styles.displayAmountOfVenuesAndResetButton}>
-            <p>show {venues.length} on the page</p>
+            <div className={styles.displayAmountOfVenues}>
+              <p>show</p>
+              <input className={styles.venuesPerPageInput} value={venues.length} onChange={handleAmountOfVenuesOnPageChange} />
+              <p>on the page</p>
+            </div>
             <button className={styles.sortButton}>sort</button>
           </div>
-        <VenuesList venues={venues} photos={photos} />
+        <VenuesList venues={venues} />
         <Pagination
-          count={Math.ceil(amountOfPages/venuesPerPage)}
+          count={Math.ceil(amountOfVenues / venuesPerPage)}
           page={currentPage}
-          onChange={handleChange}
+          onChange={handlePageChanging}
         />
         </div>
         : 'Loading' }

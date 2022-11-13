@@ -24,7 +24,11 @@
     line-height: 150%;
     color: #000000;
 }
-
+.displayAmountOfVenues {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
 .sortButton {
     background: none;
     border: none;
@@ -38,4 +42,13 @@
     color: #67AA92;
     cursor: pointer;
     margin-right: 100px;
+}
+.venuesPerPageInput {
+    text-align: center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    color: #67AA92;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }

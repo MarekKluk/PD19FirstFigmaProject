@@ -2,14 +2,14 @@ import React from 'react'
 import styles from './styles.module.css'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import PlaceIcon from '@mui/icons-material/Place'
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from '@mui/icons-material/Star'
 import GroupIcon from '@mui/icons-material/Group'
 
 export function Venue ({ venue, photo }) {
   return (
     <div className={styles.venueContainer}>
       <div className={styles.photoWithName}>
-        <img src={photo} alt={venue.name} />
+        <img src={venue.landingImgUrl} alt={venue.name} />
         <div className={styles.iconAndNameWrap}>
           <div className={styles.iconContainer}>
             <FavoriteBorderIcon />

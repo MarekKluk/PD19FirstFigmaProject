@@ -2,7 +2,7 @@ import React from 'react'
 import { Venue } from './Venue'
 import styles from './styles.module.css'
 
-export function VenuesList ({ venues, photos }) {
+export function VenuesList ({ venues }) {
   return (
     <div className={styles.venuesPicturesList}>
       {venues
@@ -10,7 +10,6 @@ export function VenuesList ({ venues, photos }) {
         <Venue
           key={venue.id}
           venue={venue}
-          photo={photos[venue.albumId].url}
         />
         ))
         : 'Loading...'}
