@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+    background-color: #FDFDFD;
+}
+.footer p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+}
+.footer a {
+    text-decoration: none;
+}
+.contactBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 130px;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    gap: 90px;
+    margin-bottom: 40px;
+}
+.contactBar a p {
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 0px;
+    color: black;
+}
+.iconButton {
+    box-sizing: border-box;
+    border: none;
+    background-color: #FDFDFD;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.socialMediaBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+}

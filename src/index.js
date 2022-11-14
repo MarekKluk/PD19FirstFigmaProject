@@ -7,6 +7,7 @@ import { Layout } from './Layout'
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './shared/styles/theme'
 import { VenuesListWithFilter } from './views/VenuesListWithFilter'
+import { Footer } from './Layout/Footer'
 
 export function FirstFigmaProject () {
   return (
@@ -24,6 +25,7 @@ export function FirstFigmaProject () {
             {/*  /> */}
             {/*  <Route path={toDoListPath} element={<ToDoListApp />} layout={Layout}> </Route> */}
             {/* </Routes> */}
+            <Footer />
           </Layout>
       </Router>
     </ThemeProvider>
