@@ -5,7 +5,7 @@ import PlaceIcon from '@mui/icons-material/Place'
 import StarIcon from '@mui/icons-material/Star'
 import GroupIcon from '@mui/icons-material/Group'
 
-export function Venue ({ venue, photo }) {
+export function Venue ({ venue, currencyExchange }) {
   return (
     <div className={styles.venueContainer}>
       <div className={styles.photoWithName}>
@@ -19,7 +19,7 @@ export function Venue ({ venue, photo }) {
           </div>
         </div>
         <div className={styles.priceAndLocalizationContainer}>
-          <p>{venue.pricePerNightInEur}zł / doba</p>
+          <p>{parseFloat(venue.pricePerNightInEur * currencyExchange.result).toFixed(2)} zł / doba</p>
           <div className={styles.iconWithLocalization}>
             <PlaceIcon />
             <p>{venue.location.name}</p>

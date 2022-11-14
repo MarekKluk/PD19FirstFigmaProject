@@ -31,7 +31,7 @@ export function VenuesListWithFilter () {
   }, [currentPage, venuesPerPage])
 
   useEffect(() => {
-    fetch('https://api.apilayer.com/currency_data/convert?base=USD&symbols=EUR,GBP,JPY&amount=5&date=2018-01-01',
+    fetch('https://api.apilayer.com/exchangerates_data/convert?to=PLN&from=EUR&amount=1',
       {
         headers: {
           apikey: 'DtbpehV28fDVm4s3sLtJl3vWCAcH8cZU'
@@ -50,7 +50,7 @@ export function VenuesListWithFilter () {
   return (
     <div className={styles.filtersAndVenuesWrap}>
       <FilterList />
-      { venues
+      { venues && currencyExchange
         ? <div className={styles.venuesListWithPagination}>
           <div className={styles.displayAmountOfVenuesAndResetButton}>
             <div className={styles.displayAmountOfVenues}>
@@ -60,7 +60,7 @@ export function VenuesListWithFilter () {
             </div>
             <button className={styles.sortButton}>sort</button>
           </div>
-        <VenuesList venues={venues} />
+        <VenuesList venues={venues} currencyExchange={currencyExchange} />
         <Pagination
           count={Math.ceil(amountOfVenues / venuesPerPage)}
           page={currentPage}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
 import { Amenities } from './Amenities'
 import { PriceRange } from './PriceRange'
@@ -6,7 +6,6 @@ import { RoomAmenities } from './RoomAmenities'
 import { Neighbourhoods } from './Neighbourhoods'
 
 export function FilterList () {
-
   return (
     <section className={styles.filterList}>
       <div className={styles.filtersResetWrap}>
