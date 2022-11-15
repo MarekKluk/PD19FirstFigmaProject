@@ -24,9 +24,10 @@ function uuidv4 () {
   )
 }
 
-export function Footer () {
+export function Footer ({ children }) {
   return (
     <footer className={styles.footer}>
+      { children }
       <div className={styles.contactBar}>
         {contactLinks.map(link => (
           <Link key={uuidv4()} to={link.path}>

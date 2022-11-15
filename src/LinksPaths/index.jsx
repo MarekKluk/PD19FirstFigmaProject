@@ -10,5 +10,5 @@ export const linkPaths = {
   facebook: 'https://facebook.com',
   instagram: 'https://instagram.com',
   twitter: 'https://twitter.com',
-  mail: 'https://gmail.com'
+  mail: 'https://gmail.com',
 }
