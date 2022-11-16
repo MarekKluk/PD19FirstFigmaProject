@@ -1,22 +1,21 @@
 import React from 'react'
 import root from 'react-dom'
 import {
-  BrowserRouter as Router, Route, Routes,
-} from 'react-router-dom';
-import { Layout } from './Layout'
+  BrowserRouter as Router, Route, Routes
+} from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
+import { Layout } from './Layout'
 import { theme } from './shared/styles/theme'
 import { VenuesListWithFilter } from './views/VenuesListWithFilter'
-import { Footer } from './Layout/Footer'
 import { linkPaths } from './LinksPaths'
-import { About } from "./views/HeaderViews/About";
-import { Favourites } from "./views/HeaderViews/Favourites";
-import { StartHosting } from "./views/HeaderViews/StartHosting";
-import { Login } from "./views/HeaderViews/Login";
-import { Contact } from "./views/FooterViews/Contact";
-import { Assistance } from "./views/FooterViews/Assistance";
-import { AboutUs } from "./views/FooterViews/AboutUs";
-import { VenueDetails } from "./views/VenueDetails";
+import { About } from './views/HeaderViews/About'
+import { Favourites } from './views/HeaderViews/Favourites'
+import { StartHosting } from './views/HeaderViews/StartHosting'
+import { Login } from './views/HeaderViews/Login'
+import { Contact } from './views/FooterViews/Contact'
+import { Assistance } from './views/FooterViews/Assistance'
+import { AboutUs } from './views/FooterViews/AboutUs'
+import { VenueDetails } from './views/VenueDetails'
 
 export function FirstFigmaProject () {
   return (

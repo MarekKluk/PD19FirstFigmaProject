@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import PlaceIcon from '@mui/icons-material/Place';
-import StarIcon from '@mui/icons-material/Star';
-import GroupIcon from '@mui/icons-material/Group';
-import { linkPaths } from "../../../../LinksPaths";
-import styles from './styles.module.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import PlaceIcon from '@mui/icons-material/Place'
+import StarIcon from '@mui/icons-material/Star'
+import GroupIcon from '@mui/icons-material/Group'
+import { linkPaths } from '../../../../LinksPaths'
+import styles from './styles.module.css'
 
 export function Venue ({ venue, currencyExchange }) {
   return (
