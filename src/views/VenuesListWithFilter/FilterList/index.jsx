@@ -13,6 +13,7 @@ export function FilterList () {
         <button className={styles.resetButton} >reset</button>
       </div>
       <div className={styles.dropdownsContainer}>
+        {/*<Dropdown> <PriceRange /> </Dropdown>*/}
         <PriceRange />
         <Amenities />
         <RoomAmenities />

@@ -7,7 +7,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore'
 import Collapse from '@mui/material/Collapse'
 import List from '@mui/material/List'
 
-export function PriceRange ({ checkIfReset }) {
+export function PriceRange () {
   const [priceValue, setPriceValue] = useState([120, 370])
   const [open, setOpen] = useState(false)
 

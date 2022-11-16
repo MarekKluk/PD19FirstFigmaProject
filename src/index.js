@@ -16,7 +16,7 @@ import { Login } from "./views/HeaderViews/Login";
 import { Contact } from "./views/FooterViews/Contact";
 import { Assistance } from "./views/FooterViews/Assistance";
 import { AboutUs } from "./views/FooterViews/AboutUs";
-
+import { VenueDetails } from "./views/VenueDetails";
 
 export function FirstFigmaProject () {
   return (
@@ -29,15 +29,12 @@ export function FirstFigmaProject () {
             <Route path={linkPaths.favourites} element={<Favourites />}> </Route>
             <Route path={linkPaths.hosting} element={<StartHosting />}> </Route>
             <Route path={linkPaths.login} element={<Login />}> </Route>
-          </Routes>
-        </Layout>
-        <Footer>
-          <Routes>
             <Route path={linkPaths.contact} element={<Contact />}> </Route>
             <Route path={linkPaths.assistance} element={<Assistance />}> </Route>
             <Route path={linkPaths.aboutUs} element={<AboutUs />}> </Route>
+            <Route path={`${linkPaths.venue}/:venueId`} element={<VenueDetails />}> </Route>
           </Routes>
-        </Footer>
+        </Layout>
       </Router>
     </ThemeProvider>
   )

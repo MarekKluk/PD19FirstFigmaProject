@@ -11,4 +11,5 @@ export const linkPaths = {
   instagram: 'https://instagram.com',
   twitter: 'https://twitter.com',
   mail: 'https://gmail.com',
+  venue: '/venue'
 }

@@ -1,15 +1,19 @@
-import React from 'react'
-import styles from './styles.module.css'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import PlaceIcon from '@mui/icons-material/Place'
-import StarIcon from '@mui/icons-material/Star'
-import GroupIcon from '@mui/icons-material/Group'
+import React from 'react';
+import { Link } from "react-router-dom";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PlaceIcon from '@mui/icons-material/Place';
+import StarIcon from '@mui/icons-material/Star';
+import GroupIcon from '@mui/icons-material/Group';
+import { linkPaths } from "../../../../LinksPaths";
+import styles from './styles.module.css';
 
 export function Venue ({ venue, currencyExchange }) {
   return (
     <div className={styles.venueContainer}>
       <div className={styles.photoWithName}>
-        <img src={venue.landingImgUrl} alt={venue.name} />
+        <Link to={`${linkPaths.venue}/${venue.id}`}>
+          <img src={venue.landingImgUrl} alt={venue.name} />
+        </Link>
         <div className={styles.iconAndNameWrap}>
           <div className={styles.iconContainer}>
             <FavoriteBorderIcon />
