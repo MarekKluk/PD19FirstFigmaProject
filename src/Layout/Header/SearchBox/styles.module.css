@@ -1,3 +1,5 @@
+@import "../../../shared/variables/variables.css";
+
 .searchBox {
     width: 100%;
     display: flex;
@@ -6,7 +8,7 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 524px;
-    background-color: #F8F5F1;
+    background-color: var(--bone-white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-image: url("../../../shared/imgs/together.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
     background-position: left bottom, top, center ;
@@ -27,14 +29,13 @@
     font-family: 'Prompt', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: var(--big-font);
     line-height: 60px;
     color: rgba(0, 0, 0, 0.75);
 }
 .narrowSearchButton {
-    color: #67AA92;
+    color: var(--celadon);
     font-weight: 600;
-    font-size: 16px;
     background: none;
     border: none;
     cursor: pointer;
@@ -48,11 +49,10 @@
     justify-content: center;
     align-items: center;
     padding: 0px;
-    color: #FFFFFF;
+    color: var(--white);
     font-weight: 600;
-    font-size: 16px;
     line-height: 24px;
-    background: #67AA92;
+    background: var(--celadon);
     border-radius: 18px;
     border: none;
     cursor: pointer;

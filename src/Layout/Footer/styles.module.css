@@ -1,3 +1,5 @@
+@import "../../shared/variables/variables.css";
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -6,15 +8,12 @@
     align-items: center;
     min-height: 400px;
     width: 100%;
-    background-color: #FDFDFD;
+    background-color: var(--white);
 }
 .footer p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
     margin: 0;
 }
+
 .footer a {
     text-decoration: none;
 }
@@ -32,16 +31,12 @@
 }
 .contactBar a p {
     text-transform: lowercase;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
     padding: 0px;
     color: black;
 }
 .iconButton {
-    box-sizing: border-box;
     border: none;
-    background-color: #FDFDFD;
+    background-color: var(--white);
     width: 40px;
     height: 40px;
     cursor: pointer;

@@ -1,3 +1,5 @@
+@import "../../../shared/variables/variables.css";
+
 .topNavigationBar {
     min-height: 56px;
     display: flex;
@@ -6,7 +8,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 120px;
-    background-color: #FDFDFD;
+    background-color: var(--white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
 }

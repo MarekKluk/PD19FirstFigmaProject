@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 import Slider from '@mui/material/Slider'
 
-export const StyledSlider = styled(Slider)(({ theme }) => ({
+export const StyledSlider = styled(Slider)(() => ({
   color: '#67AA92',
   height: 3,
   padding: '13px 0',
@@ -25,8 +25,8 @@ export const StyledSlider = styled(Slider)(({ theme }) => ({
     height: 3
   },
   '& .MuiSlider-rail': {
-    color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#d8d8d8',
-    opacity: theme.palette.mode === 'dark' ? undefined : 1,
+    color: '#d8d8d8',
+    opacity: 1,
     height: 3
   },
   '& .MuiSlider-valueLabel': {
@@ -38,7 +38,5 @@ export const StyledSlider = styled(Slider)(({ theme }) => ({
     height: 32,
     backgroundColor: '#67AA92',
     transformOrigin: 'bottom left'
-
   }
-
 }))
