@@ -1,0 +1,62 @@
+@import "../../../shared/variables/variables.css";
+
+.searchBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 524px;
+    background-color: var(--bone-white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: url("../../../shared/imgs/together.svg"), url("../../../shared/imgs/wave.svg"), url("../../../shared/imgs/background.svg");
+    background-position: left bottom, top, center ;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 300px, contain, contain;
+}
+
+.searchMachine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 25px;
+}
+
+.welcomeText {
+    font-family: 'Prompt', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--big-font);
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.75);
+}
+.narrowSearchButton {
+    color: var(--celadon);
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 260px;
+    height: 24px;
+    margin-top: 19px;
+}
+.searchVenueButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    color: var(--white);
+    font-weight: 600;
+    line-height: 24px;
+    background: var(--celadon);
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    height: 40px;
+    margin-top: 44px;
+}

@@ -1,0 +1,56 @@
+@import "../../shared/variables/variables.css";
+
+.filtersAndVenuesWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.venuesListWithPagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.displayAmountOfVenuesAndResetButton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.displayAmountOfVenuesAndResetButton p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+.displayAmountOfVenues {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.sortButton {
+    background: none;
+    border: none;
+    width: 34px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--celadon);
+    cursor: pointer;
+    margin-right: 100px;
+}
+.venuesPerPageInput {
+    text-align: center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    color: var(--celadon);
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
