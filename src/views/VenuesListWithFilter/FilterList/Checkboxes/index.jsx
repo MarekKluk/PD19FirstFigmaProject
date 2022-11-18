@@ -5,41 +5,32 @@ import ListItemText from '@mui/material/ListItemText'
 import ListItem from '@mui/material/ListItem'
 import Checkbox from '@mui/material/Checkbox'
 
-export function RoomAmenities ({ checkedRoomAmenities, setCheckedRoomAmenities }) {
-  const roomAmenitiesFilters = [
-    'kitchen facilities',
-    'bathroom facilities',
-    'air conditioning',
-    'safe',
-    'TV'
-  ]
+export function Checkboxes ({ checkedBoxes, setCheckedBoxes, filtersArray }) {
 
   const handleToggle = (value) => () => {
-    const currentIndex = checkedRoomAmenities.indexOf(value)
-    const newChecked = [...checkedRoomAmenities]
+    const currentIndex = checkedBoxes.indexOf(value)
+    const newChecked = [...checkedBoxes]
     if (currentIndex === -1) {
       newChecked.push(value)
     } else {
       newChecked.splice(currentIndex, 1)
     }
-    setCheckedRoomAmenities(newChecked)
+    setCheckedBoxes(newChecked)
   }
 
   return (
-    roomAmenitiesFilters.map((value) => {
+    filtersArray.map((value) => {
       const labelId = `checkbox-list-label-${value}`
       return (
         <ListItem
           key={value}
           disablePadding
         >
-          <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+          <ListItemButton onClick={handleToggle(value)} dense>
             <ListItemIcon>
               <Checkbox
                 edge="start"
-                checked={checkedRoomAmenities.indexOf(value) !== -1}
-                tabIndex={-1}
-                disableRipple
+                checked={checkedBoxes.indexOf(value) !== -1}
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>

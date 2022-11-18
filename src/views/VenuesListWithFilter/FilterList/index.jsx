@@ -1,16 +1,64 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { Amenities } from './Amenities'
 import { PriceRange } from './PriceRange'
-import { RoomAmenities } from './RoomAmenities'
-import { Neighbourhoods } from './Neighbourhoods'
 import { Dropdown } from './Dropdown'
+import { Checkboxes } from "./Checkboxes";
+
+const amenitiesFilters = [
+  'parking',
+  'WiFi',
+  'restaurant',
+  'bar',
+  'pool',
+  'jacuzzi',
+  'specjal'
+]
+
+const roomAmenitiesFilters = [
+  'kitchen facilities',
+  'bathroom facilities',
+  'air conditioning',
+  'safe',
+  'TV'
+]
+
+const neighbourhoodsFilters = [
+  'lake',
+  'forest',
+  'mountains',
+  'sea',
+  'river',
+  'park',
+  'zoo',
+  'national park'
+]
 
 export function FilterList () {
   const [priceValue, setPriceValue] = useState([120, 370])
   const [checkedAmenities, setCheckedAmenities] = useState([0])
   const [checkedRoomAmenities, setCheckedRoomAmenities] = useState([0])
   const [checkedNeighbourhoods, setCheckedNeighbourhoods] = useState([0])
+
+  const checkboxesToRender = [
+    {
+      label: 'amenities',
+      checkedBoxes: checkedAmenities,
+      setCheckedBoxes: setCheckedAmenities,
+      filtersArray: amenitiesFilters
+    },
+    {
+      label: 'room amenities',
+      checkedBoxes: checkedRoomAmenities,
+      setCheckedBoxes: setCheckedRoomAmenities,
+      filtersArray: roomAmenitiesFilters
+    },
+    {
+      label: 'neighbourhoods',
+      checkedBoxes: checkedNeighbourhoods,
+      setCheckedBoxes: setCheckedNeighbourhoods,
+      filtersArray: neighbourhoodsFilters
+    },
+  ]
 
   const handleResetButton = () => {
     setPriceValue([120, 370])
@@ -32,24 +80,15 @@ export function FilterList () {
           setPriceValue={setPriceValue}
           />
         </Dropdown>
-        <Dropdown label={'amenities'}>
-          <Amenities
-            checkedAmenities={checkedAmenities}
-            setCheckedAmenities={setCheckedAmenities}
-          />
-        </Dropdown>
-        <Dropdown label={'room amenities'}>
-          <RoomAmenities
-            checkedRoomAmenities={checkedRoomAmenities}
-            setCheckedRoomAmenities={setCheckedRoomAmenities}
-          />
-        </Dropdown>
-        <Dropdown label={'neighbourhoods'}>
-          <Neighbourhoods
-            checkedNeighbourhoods={checkedNeighbourhoods}
-            setCheckedNeighbourhoods={setCheckedNeighbourhoods}
-          />
-        </Dropdown>
+        {checkboxesToRender.map(checkboxes => (
+          <Dropdown key={checkboxes.label} label={checkboxes.label}>
+            <Checkboxes
+              checkedBoxes={checkboxes.checkedBoxes}
+              setCheckedBoxes={checkboxes.setCheckedBoxes}
+              filtersArray={checkboxes.filtersArray}
+            />
+          </Dropdown>
+        ))}
       </div>
     </section>
   )

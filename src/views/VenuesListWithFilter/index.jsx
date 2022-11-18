@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
 import styles from './styles.module.css'
 import { VenuesList } from './VenuesList'
 import { Pagination } from '@mui/material'
@@ -67,7 +68,7 @@ export function VenuesListWithFilter () {
           onChange={handlePageChanging}
         />
         </div>
-        : 'Loading' }
+        : <CircularProgress /> }
     </div>
   )
 }

@@ -1,3 +1,5 @@
+@import "../../shared/variables/variables.css";
+
 .filtersAndVenuesWrap {
     display: flex;
     flex-direction: row;
@@ -39,7 +41,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.03em;
-    color: #67AA92;
+    color: var(--celadon);
     cursor: pointer;
     margin-right: 100px;
 }
@@ -48,7 +50,7 @@
     box-sizing: border-box;
     width: 40px;
     height: 40px;
-    color: #67AA92;
+    color: var(--celadon);
     font-weight: 600;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }

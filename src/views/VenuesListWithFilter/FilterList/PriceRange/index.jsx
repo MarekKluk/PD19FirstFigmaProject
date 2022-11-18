@@ -16,7 +16,6 @@ export function PriceRange ({ priceValue, setPriceValue }) {
   return (
     <StyledSlider
       sx={{ mt: 10 }}
-      getAriaLabel={() => 'Minimum distance'}
       value={priceValue}
       valueLabelFormat={value => <div>{value} zł</div>}
       onChange={handlePriceValueChange}
