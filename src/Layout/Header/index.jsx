@@ -3,12 +3,11 @@ import styles from './styles.module.css'
 import { TopNavigationBar } from './Top Navigation'
 import { SearchBox } from './SearchBox'
 
-export function Header ({ children }) {
+export function Header () {
   return (
     <div className={styles.header}>
       <TopNavigationBar />
       <SearchBox />
-      { children }
     </div>
   )
 }

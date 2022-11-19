@@ -1,0 +1,34 @@
+@import "../../../shared/variables/variables.css";
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 692px;
+}
+.nameAndRating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nameAndAddress {
+    display: flex;
+    flex-direction: column;
+}
+.h3 {
+    font-weight: var(--bold-font);
+    font-size: var(--big-font);
+    color: var(--black);
+}
+.h4 {
+    font-size: var(--medium-font);
+    color: var(--black);
+}
+.rating p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+}
+.rating {
+    display: flex;
+    flex-direction: column;
+}
