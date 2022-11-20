@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { PriceRange } from './PriceRange'
 import { Dropdown } from './Dropdown'
-import { Checkboxes } from "./Checkboxes";
+import { Checkboxes } from './Checkboxes'
 
 const amenitiesFilters = [
   'parking',
@@ -57,7 +57,7 @@ export function FilterList () {
       checkedBoxes: checkedNeighbourhoods,
       setCheckedBoxes: setCheckedNeighbourhoods,
       filtersArray: neighbourhoodsFilters
-    },
+    }
   ]
 
   const handleResetButton = () => {
