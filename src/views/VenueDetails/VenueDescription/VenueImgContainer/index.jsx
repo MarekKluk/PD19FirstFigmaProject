@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 export function VenueImgContainer ({ imgSrc }) {
   return (
     <div className={styles.venueImgContainer}>
-      <img src={imgSrc} alt={'venue photo'} />
+      <img src={imgSrc} />
       <div className={styles.iconContainer}>
         <FavoriteBorderIcon />
       </div>

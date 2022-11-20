@@ -4,6 +4,7 @@ import { VenueDescription } from './VenueDescription'
 import CircularProgress from '@mui/material/CircularProgress'
 
 const baseVenueDetailsUrl = 'http://localhost:3000/venuesDetails'
+
 export function VenueDetails () {
   const [venueDetails, setVenueDetails] = useState(null)
   const { venueId } = useParams()
@@ -16,9 +17,8 @@ export function VenueDetails () {
     }
     fetchLocalizations()
       .catch(console.error)
-  }, [])
+  }, [venueId])
 
-  console.log(venueDetails)
   return (
     <>
     {venueDetails ? <VenueDescription venueDetails={venueDetails}/> : <CircularProgress /> }
