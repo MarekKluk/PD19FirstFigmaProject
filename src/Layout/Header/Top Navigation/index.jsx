@@ -1,32 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './styles.module.css'
+import styles from '../../../styles.module.css'
 import { linkPaths } from '../../../LinksPaths'
 import { Button } from '@mui/material'
-
-const links = [
-  { label: 'about us', path: linkPaths.about },
-  { label: 'your favourites', path: linkPaths.favourites },
-  { label: 'start hosting', path: linkPaths.hosting },
-  { label: 'login', path: linkPaths.login }
-]
 
 export function TopNavigationBar () {
   return (
     <div className={styles.topNavigationBar}>
       <Link to={linkPaths.home}>
-        <Button variant ="text">
-          <p>bookify</p>
-        </Button>
+       <p>BOOKIFY</p>
       </Link>
       <div className={styles.topNavigationBarLinksWrapper}>
-        {links.map(link => (
-          <Link key={link.path} to={link.path}>
+        <Link to={linkPaths.about}>
           <Button variant ="text">
-            <p>{link.label}</p>
+            <p>about us</p>
           </Button>
-        </Link>))
-        }
+        </Link>
+        <Link to={linkPaths.favourites}>
+          <Button variant ="text">
+            <p>your favourites</p>
+          </Button>
+        </Link>
+        <Link to={linkPaths.hosting}>
+          <Button variant ="text">
+            <p>start hosting</p>
+          </Button>
+        </Link>
+        <Link to={linkPaths.login}>
+          <Button variant ="text">
+            <p>login</p>
+          </Button>
+        </Link>
       </div>
     </div>
   )
