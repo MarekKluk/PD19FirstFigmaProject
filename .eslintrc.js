@@ -5,9 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard',
-    'react-app',
-    'react-app/jest'
+    'standard'
   ],
   overrides: [
   ],
@@ -20,9 +18,8 @@ module.exports = {
   ],
   rules: {
     'react/no-set-state': 'off',
-    'max-lines-per-function': [1, 80],
+    'max-lines-per-function': [1, 40],
     'import/prefer-default-export': 'off',
-    'no-plusplus': 'off',
-    'react/prop-types': 'off'
+    'no-plusplus': 'off'
   }
 }
