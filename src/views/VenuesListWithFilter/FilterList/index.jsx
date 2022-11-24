@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { PriceRange } from './PriceRange'
 import { Dropdown } from './Dropdown'
-import { Checkboxes } from './Checkboxes'
+import { CheckboxesList } from './CheckboxesList'
 
 const amenitiesFilters = [
   'parking',
@@ -33,8 +33,10 @@ const neighbourhoodsFilters = [
   'national park'
 ]
 
+const DEFAULT_MIN_PRICE = 120
+const DEFAULT_MAX_PRICE = 370
 export function FilterList () {
-  const [priceValue, setPriceValue] = useState([120, 370])
+  const [priceValue, setPrice] = useState([DEFAULT_MIN_PRICE, DEFAULT_MAX_PRICE])
   const [checkedAmenities, setCheckedAmenities] = useState([0])
   const [checkedRoomAmenities, setCheckedRoomAmenities] = useState([0])
   const [checkedNeighbourhoods, setCheckedNeighbourhoods] = useState([0])
@@ -61,7 +63,7 @@ export function FilterList () {
   ]
 
   const handleResetButton = () => {
-    setPriceValue([120, 370])
+    setPrice([DEFAULT_MIN_PRICE, DEFAULT_MAX_PRICE])
     setCheckedAmenities([0])
     setCheckedRoomAmenities([0])
     setCheckedNeighbourhoods([0])
@@ -74,15 +76,15 @@ export function FilterList () {
         <button className={styles.resetButton} onClick={handleResetButton} >reset</button>
       </div>
       <div className={styles.dropdownsContainer}>
-        <Dropdown label={'price range'}>
+        <Dropdown label="price range">
           <PriceRange
           priceValue={priceValue}
-          setPriceValue={setPriceValue}
+          setPrice={setPrice}
           />
         </Dropdown>
         {checkboxesToRender.map(checkboxes => (
           <Dropdown key={checkboxes.label} label={checkboxes.label}>
-            <Checkboxes
+            <CheckboxesList
               checkedBoxes={checkboxes.checkedBoxes}
               setCheckedBoxes={checkboxes.setCheckedBoxes}
               filtersArray={checkboxes.filtersArray}

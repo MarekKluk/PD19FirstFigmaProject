@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
-import { Input } from '../../../shared/components/StyledInput'
-import SearchIcon from '@mui/icons-material/Search'
+import { Autocomplete } from './Autocomplete'
 import { IconButton, InputBase, Paper, TextField } from '@mui/material'
 import { LocalizationProvider } from '@mui/x-date-pickers-pro'
 import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs'
@@ -27,7 +26,6 @@ export function SearchBox () {
   }, [])
 
   const incrementCounter = () => setCount(count + 1)
-
   const decrementCounter = () => setCount(count - 1)
 
   return (
@@ -35,36 +33,9 @@ export function SearchBox () {
       <p className={styles.welcomeText}>Find your place and experience it together.</p>
       {localizationOptions
         ? <div className={styles.searchMachine}>
-        <Input
-          autocompleteProps={{
-            disablePortal: true,
-            id: 'combo-box-demo',
-            options
-          }}
-          autocomplete
-          icon={<SearchIcon/>}
-          labelName={'localization'}
-        />
-        <Input
-          autocompleteProps={{
-            disablePortal: true,
-            id: 'combo-box-demo',
-            options
-          }}
-          autocomplete
-          icon={<SearchIcon/>}
-          labelName={'occasion'}
-        />
-        <Input
-          autocompleteProps={{
-            disablePortal: true,
-            id: 'combo-box-demo',
-            options
-          }}
-          autocomplete
-          icon={<SearchIcon />}
-          labelName={'venue type'}
-        />
+        <Autocomplete labelName={'localization'} options={options} />
+        <Autocomplete labelName={'occasion'} options={options} />
+        <Autocomplete labelName={'venue type'} options={options} />
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <StyledDataRangePicker
               calendars={1}

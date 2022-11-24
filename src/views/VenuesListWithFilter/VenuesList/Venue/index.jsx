@@ -12,7 +12,12 @@ export function Venue ({ venue, currencyExchange }) {
     <div className={styles.venueContainer}>
       <div className={styles.photoWithName}>
         <Link to={`${linkPaths.venue}/${venue.id}`}>
-          <img src={venue.landingImgUrl} alt={venue.name} />
+          <div
+            className={styles.venueBackground}
+            style={{
+            backgroundImage: `url(${venue.landingImgUrl})`
+            }}>
+          </div>
         </Link>
         <div className={styles.iconAndNameWrap}>
           <div className={styles.iconContainer}>
