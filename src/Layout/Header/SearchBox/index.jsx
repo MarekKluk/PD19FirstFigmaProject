@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import styles from './styles.module.css'
-import { Autocomplete } from './Autocomplete'
 import { IconButton, InputBase, Paper, TextField } from '@mui/material'
+import CircularProgress from '@mui/material/CircularProgress'
 import { LocalizationProvider } from '@mui/x-date-pickers-pro'
 import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs'
 import { StyledDataRangePicker } from '../../../shared/components/StyledCalendar'
 import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
+import styles from './styles.module.css'
+import { Autocomplete } from './Autocomplete'
 
 export function SearchBox () {
   const [value, setValue] = React.useState([null, null])
@@ -69,7 +70,7 @@ export function SearchBox () {
           </IconButton>
         </Paper>
       </div>
-        : 'Loading' }
+        : <CircularProgress /> }
       <button className={styles.narrowSearchButton}>I dont want to be that specific</button>
       <button className={styles.searchVenueButton}>Search for venue</button>
     </div>

@@ -8,19 +8,22 @@
     width: 32px;
     height: 32px;
     background: rgba(0, 0, 0, 0.6);
-    border-radius: 0px 0px 8px 0px;
+    border-radius: 0 0 8px 0;
     opacity: 0.99;
     color: var(--white);
 }
 .venueImgContainer {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 352px;
-    max-width: 692px;
     max-height: 352px;
 }
-.venueImgContainer img {
-    position: absolute;
+
+.venueImg {
+    height: 352px;
     width: 100%;
-    max-width: 692px;
-    max-height: 352px;
+    max-width: 682px;
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -1,13 +1,10 @@
 import React from 'react'
-import DoneIcon from '@mui/icons-material/Done'
 import BedIcon from '@mui/icons-material/Bed'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import LocationCityIcon from '@mui/icons-material/LocationCity'
 import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
 import styles from './styles.module.css'
+import { CustomListItem } from "./CustomListItem";
 
 export function Description ({ venueDetails }) {
   return (
@@ -18,20 +15,7 @@ export function Description ({ venueDetails }) {
       <div className={styles.venuesAmenities}>
         <List>
           {venueDetails.features.map((feature, index) => (
-            <ListItem key={`${feature}-${index}`} disableGutters={true}>
-              <ListItemIcon>
-                <DoneIcon fontSize={'large'} />
-              </ListItemIcon>
-              <ListItemText
-                primary={feature}
-                primaryTypographyProps={{
-                  fontSize: 20,
-                  fontFamily: 'Prompt',
-                  fontWeight: 300,
-                  letterSpacing: 0.03
-                }}
-              />
-            </ListItem>
+            <CustomListItem key={`${feature}-${index}`} feature={feature} />
           ))}
         </List>
       </div>

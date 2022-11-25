@@ -5,9 +5,13 @@ import styles from './styles.module.css'
 export function VenueImgContainer ({ imgSrc }) {
   return (
     <div className={styles.venueImgContainer}>
-      <img src={imgSrc} />
-      <div className={styles.iconContainer}>
-        <FavoriteBorderIcon />
+      <div className={styles.venueImg}
+       style={{
+         backgroundImage: `url(${imgSrc})`
+        }}>
+        <div className={styles.iconContainer}>
+          <FavoriteBorderIcon />
+        </div>
       </div>
     </div>
   )
