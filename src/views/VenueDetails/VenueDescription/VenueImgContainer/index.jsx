@@ -8,7 +8,7 @@ export function VenueImgContainer ({ imgSrc }) {
       <div className={styles.venueImg}
        style={{
          backgroundImage: `url(${imgSrc})`
-        }}>
+       }}>
         <div className={styles.iconContainer}>
           <FavoriteBorderIcon />
         </div>

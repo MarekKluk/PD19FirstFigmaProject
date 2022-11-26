@@ -4,7 +4,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import LocationCityIcon from '@mui/icons-material/LocationCity'
 import List from '@mui/material/List'
 import styles from './styles.module.css'
-import { CustomListItem } from "./CustomListItem";
+import { CustomListItem } from './CustomListItem'
 
 export function Description ({ venueDetails }) {
   return (

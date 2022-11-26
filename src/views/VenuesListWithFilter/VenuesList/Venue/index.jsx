@@ -15,7 +15,7 @@ export function Venue ({ venue, currencyExchange }) {
           <div
             className={styles.venueBackground}
             style={{
-            backgroundImage: `url(${venue.landingImgUrl})`
+              backgroundImage: `url(${venue.landingImgUrl})`
             }}>
           </div>
         </Link>

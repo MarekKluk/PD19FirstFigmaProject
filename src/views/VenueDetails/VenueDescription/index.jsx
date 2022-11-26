@@ -8,28 +8,30 @@ import { Gallery } from './Gallery'
 import { LocationMap } from './LocationMap'
 
 export function VenueDescription ({ venueDetails }) {
-  const [displayDescription, setDisplayDescription] = useState(true)
-  const [displayGallery, setDisplayGallery] = useState(false)
-  const [displayMap, setDisplayMap] = useState(false)
+  const [displayData, setDisplayData] = useState('description')
 
   let imgsToDisplay = venueDetails.venueDescriptionImgUrls
   imgsToDisplay = { 0: venueDetails.landingImgUrl, ...imgsToDisplay }
   imgsToDisplay = Object.values(imgsToDisplay)
 
   const handleDescriptionButton = () => {
-    setDisplayDescription(true)
-    setDisplayGallery(false)
-    setDisplayMap(false)
+    setDisplayData('description')
   }
   const handleGalleryButton = () => {
-    setDisplayDescription(false)
-    setDisplayGallery(true)
-    setDisplayMap(false)
+    setDisplayData('gallery')
   }
   const handleMapButton = () => {
-    setDisplayDescription(false)
-    setDisplayGallery(false)
-    setDisplayMap(true)
+    setDisplayData('map')
+  }
+
+  const handleWhatDataToDisplay = () => {
+    if (displayData === 'description') {
+      return <Description venueDetails={venueDetails} />
+    } else if (displayData === 'gallery') {
+      return <Gallery venuesGallery={imgsToDisplay} />
+    } else if (displayData === 'map') {
+      return <LocationMap />
+    }
   }
 
   return (
@@ -55,9 +57,7 @@ export function VenueDescription ({ venueDetails }) {
         <button className={styles.navigationButton} onClick={handleMapButton}>map</button>
       </div>
       <div className={styles.detailsContainer}>
-        {displayDescription && <Description venueDetails={venueDetails} />}
-        {displayGallery && <Gallery venuesGallery={imgsToDisplay} />}
-        {displayMap && <LocationMap />}
+        {handleWhatDataToDisplay()}
       </div>
     </div>
   )
