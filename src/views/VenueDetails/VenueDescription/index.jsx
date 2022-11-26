@@ -8,30 +8,20 @@ import { Gallery } from './Gallery'
 import { LocationMap } from './LocationMap'
 
 export function VenueDescription ({ venueDetails }) {
-  const [displayData, setDisplayData] = useState('description')
+  const [displayComponent, setDisplayComponent] = useState(<Description venueDetails={venueDetails}/>)
 
   let imgsToDisplay = venueDetails.venueDescriptionImgUrls
   imgsToDisplay = { 0: venueDetails.landingImgUrl, ...imgsToDisplay }
   imgsToDisplay = Object.values(imgsToDisplay)
 
   const handleDescriptionButton = () => {
-    setDisplayData('description')
+    setDisplayComponent(<Description venueDetails={venueDetails} />)
   }
   const handleGalleryButton = () => {
-    setDisplayData('gallery')
+    setDisplayComponent(<Gallery venuesGallery={imgsToDisplay} />)
   }
   const handleMapButton = () => {
-    setDisplayData('map')
-  }
-
-  const handleWhatDataToDisplay = () => {
-    if (displayData === 'description') {
-      return <Description venueDetails={venueDetails} />
-    } else if (displayData === 'gallery') {
-      return <Gallery venuesGallery={imgsToDisplay} />
-    } else if (displayData === 'map') {
-      return <LocationMap />
-    }
+    setDisplayComponent(<LocationMap />)
   }
 
   return (
@@ -57,7 +47,7 @@ export function VenueDescription ({ venueDetails }) {
         <button className={styles.navigationButton} onClick={handleMapButton}>map</button>
       </div>
       <div className={styles.detailsContainer}>
-        {handleWhatDataToDisplay()}
+        {displayComponent}
       </div>
     </div>
   )
