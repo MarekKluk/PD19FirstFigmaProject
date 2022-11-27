@@ -1,0 +1,7 @@
+.venueDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 190px;
+}
