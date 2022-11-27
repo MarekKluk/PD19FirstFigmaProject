@@ -10,7 +10,7 @@ import styles from './styles.module.css'
 import { Autocomplete } from './Autocomplete'
 
 export function SearchBox () {
-  const [value, setValue] = React.useState([null, null])
+  const [value, setValue] = useState([null, null])
   const [count, setCount] = useState(null)
   const [localizationOptions, setLocalizationOptions] = useState(null)
 

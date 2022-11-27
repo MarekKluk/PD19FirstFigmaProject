@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress'
 import { VenueDescription } from './VenueDescription'
-import { BookVenue } from "./BookVenue"
-import styles from "./styles.module.css"
+import { BookVenue } from './BookVenue'
+import styles from './styles.module.css'
 
 const baseVenueDetailsUrl = 'http://localhost:3000/venuesDetails'
 
@@ -24,7 +24,7 @@ export function VenueDetails () {
   return (
     <div className={styles.venueDetailsContainer}>
       {venueDetails ? <VenueDescription venueDetails={venueDetails}/> : <CircularProgress /> }
-      <BookVenue />
+      {venueDetails ? <BookVenue venueDetails={venueDetails} /> : <CircularProgress /> }
     </div>
   )
 }
