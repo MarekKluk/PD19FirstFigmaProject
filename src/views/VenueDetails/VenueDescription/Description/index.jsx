@@ -14,8 +14,8 @@ export function Description ({ venueDetails }) {
       </div>
       <div className={styles.venuesAmenities}>
         <List>
-          {venueDetails.features.map((feature, index) => (
-            <CustomListItem key={`${feature}-${index}`} feature={feature} />
+          {venueDetails.features.map(feature => (
+            <CustomListItem key={feature} feature={feature} />
           ))}
         </List>
       </div>

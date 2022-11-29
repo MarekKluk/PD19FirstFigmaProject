@@ -10,7 +10,7 @@ import styles from './styles.module.css'
 import { Autocomplete } from './Autocomplete'
 
 export function SearchBox () {
-  const [value, setValue] = useState([null, null])
+  const [calendarData, setCalendarData] = useState([null, null])
   const [count, setCount] = useState(null)
   const [localizationOptions, setLocalizationOptions] = useState(null)
 
@@ -40,9 +40,9 @@ export function SearchBox () {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <StyledDataRangePicker
               calendars={1}
-              value={value}
+              value={calendarData}
               onChange={(newValue) => {
-                setValue(newValue)
+                setCalendarData(newValue)
               }}
               renderInput={(startProps, endProps) => (
                 <>

@@ -1,8 +1,9 @@
 import { styled } from '@mui/material/styles'
 import Slider from '@mui/material/Slider'
 
-const celadonColor = getComputedStyle(document.documentElement).getPropertyValue('--celadon')
-const whiteColor = getComputedStyle(document.documentElement).getPropertyValue('--white')
+const celadonColor = '#67AA92'
+const whiteColor = '#FDFDFD'
+const boneWhite = '#F8F5F1'
 
 export const StyledSlider = styled(Slider)(() => ({
   color: celadonColor,
@@ -28,7 +29,7 @@ export const StyledSlider = styled(Slider)(() => ({
     height: 3
   },
   '& .MuiSlider-rail': {
-    color: whiteColor,
+    color: boneWhite,
     opacity: 1,
     height: 3
   },

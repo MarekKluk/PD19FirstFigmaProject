@@ -9,7 +9,7 @@ import { linkPaths } from '../../../LinksPaths'
 import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { GrLanguage } from 'react-icons/gr'
 
-const dayInMilliseconds = 24 * 60 * 60 * 1000
+const DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000
 let firstDayTime = null
 let secondDayTime = null
 let amountOfBookedDays = null
@@ -37,14 +37,14 @@ export function BookVenue ({ venueDetails }) {
     if (!value[1]) {
       secondDayTime = firstDayTime
     }
-    amountOfBookedDays = Math.round((Math.abs((firstDayTime - secondDayTime) / (dayInMilliseconds))) + 1)
+    amountOfBookedDays = Math.round((Math.abs((firstDayTime - secondDayTime) / (DAY_IN_MILLISECONDS))) + 1)
   }
 
   useEffect(() => {
     fetch('https://api.apilayer.com/exchangerates_data/convert?to=PLN&from=EUR&amount=1',
       {
         headers: {
-          apikey: 'DtbpehV28fDVm4s3sLtJl3vWCAcH8cZU'
+          apikey: 'NrQIQreA18mCUi76aT6IACgTitJMd8u4'
         }
       })
       .then((res) => res.json())
