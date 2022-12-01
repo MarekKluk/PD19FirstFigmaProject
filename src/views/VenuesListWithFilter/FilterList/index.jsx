@@ -72,7 +72,7 @@ export function FilterList () {
   return (
     <section className={styles.filterList}>
       <div className={styles.filtersResetWrap}>
-        <p>FILTERS</p>
+        <p>filters</p>
         <button className={styles.resetButton} onClick={handleResetButton} >reset</button>
       </div>
       <div className={styles.dropdownsContainer}>

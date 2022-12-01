@@ -38,7 +38,7 @@
     justify-content: space-between;
 }
 .countYourBookingContainer p {
-    font-size: var(--big-font);
+    font-size: var(--medium-font);
     color: var(--black);
 }
 .bookButtonContainer {

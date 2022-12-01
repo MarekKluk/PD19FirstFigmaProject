@@ -16,7 +16,7 @@ export function Calendar ({ value, setValue }) {
   }
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} >
       <StyledDataRangePicker
         calendars={1}
         value={value}

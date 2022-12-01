@@ -6,6 +6,7 @@ import {
 import { ThemeProvider } from '@mui/material/styles'
 import { Layout } from './Layout'
 import { theme } from './shared/styles/theme'
+import './index.css'
 import { VenuesListWithFilter } from './views/VenuesListWithFilter'
 import { linkPaths } from './LinksPaths'
 import { About } from './views/HeaderViews/About'

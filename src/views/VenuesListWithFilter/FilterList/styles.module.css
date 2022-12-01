@@ -1,3 +1,5 @@
+@import "../../../shared/variables/variables.css";
+
 .filterList {
     display: flex;
     flex-direction: column;
@@ -18,12 +20,13 @@
     background: #F8F5F1
 }
 .filtersResetWrap p {
+    text-transform: uppercase;
     width: 73px;
     height: 30px;
     left: 106px;
     top: 9px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--bold-font);
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.03em;
@@ -34,13 +37,14 @@
     background: none;
     border: none;
     height: 24px;
-    font-style: normal;
+    font-family: inherit;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.03em;
-    color: #67AA92;
+    color: var(--celadon);
     cursor: pointer;
+    margin-right: 12px;
 }
 .dropdownsContainer {
     margin-top: 5px;

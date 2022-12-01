@@ -6,6 +6,15 @@ export const StyledDataRangePicker = styled(DateRangePicker)(() => ({
     borderRadius: '18px',
     height: 48,
     width: 110,
-    background: 'white'
+    background: 'white',
+    textAlign: 'center'
+  },
+  '& .MuiFormLabel-root': {
+    textAlign: 'center',
+    width: 80
+  },
+  '& .MuiPickersPopper-root': {
+    marginTop: '50px',
   }
+
 }))

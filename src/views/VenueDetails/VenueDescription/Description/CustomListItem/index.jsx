@@ -14,7 +14,7 @@ export function CustomListItem ({ feature }) {
         primary={feature}
         primaryTypographyProps={{
           fontSize: 20,
-          fontFamily: 'Prompt',
+          fontFamily: 'Poppins, sans-serif',
           fontWeight: 300,
           letterSpacing: 0.03
         }}

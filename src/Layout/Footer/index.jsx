@@ -24,7 +24,7 @@ export function Footer () {
       <div className={styles.contactBar}>
         {contactLinks.map(link => (
           <Link key={link.path} to={link.path}>
-            <Button variant ="text">
+            <Button variant ="text" sx={{fontFamily: 'Poppins, sans-serif'}}>
               <p>{link.label}</p>
             </Button>
           </Link>))

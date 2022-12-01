@@ -36,8 +36,8 @@
     background: none;
     border: none;
     height: 24px;
-    font-style: normal;
-    font-weight: 600;
+    font-family: inherit;
+    font-weight: var(--bold-font);
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.03em;
@@ -50,6 +50,6 @@
     width: 40px;
     height: 40px;
     color: var(--celadon);
-    font-weight: 600;
+    font-weight: var(--bold-font);
     border: 1px solid rgba(0, 0, 0, 0.2);
 }

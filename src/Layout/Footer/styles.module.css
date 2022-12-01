@@ -31,7 +31,7 @@
 }
 .contactBar a p {
     text-transform: lowercase;
-    padding: 0px;
+    padding: 0;
     color: black;
 }
 .iconButton {
