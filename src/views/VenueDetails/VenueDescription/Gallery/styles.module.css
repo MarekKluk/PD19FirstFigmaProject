@@ -10,4 +10,5 @@
 .galleryContainer img {
     width: 250px;
     height: 180px;
+    cursor: pointer;
 }

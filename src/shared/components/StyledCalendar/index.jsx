@@ -14,7 +14,10 @@ export const StyledDataRangePicker = styled(DateRangePicker)(() => ({
     width: 80
   },
   '& .MuiPickersPopper-root': {
-    marginTop: '50px',
+    marginTop: '50px'
+  },
+  '& .css-14lo706': {
+    marginLeft: '15px'
   }
 
 }))
