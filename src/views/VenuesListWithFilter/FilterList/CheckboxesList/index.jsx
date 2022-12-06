@@ -5,8 +5,7 @@ import ListItemText from '@mui/material/ListItemText'
 import ListItem from '@mui/material/ListItem'
 import Checkbox from '@mui/material/Checkbox'
 
-export function Checkboxes ({ checkedBoxes, setCheckedBoxes, filtersArray }) {
-
+export function CheckboxesList ({ checkedBoxes, setCheckedBoxes, filtersArray }) {
   const handleToggle = (value) => () => {
     const currentIndex = checkedBoxes.indexOf(value)
     const newChecked = [...checkedBoxes]

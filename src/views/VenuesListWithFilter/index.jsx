@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import CircularProgress from '@mui/material/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress'
 import styles from './styles.module.css'
 import { VenuesList } from './VenuesList'
 import { Pagination } from '@mui/material'
 import { FilterList } from './FilterList'
 
 const venuesUrl = 'http://localhost:3000/venues'
+const defaultAmountOfVenuesPerPage = 18
+const defaultPageNumber = 1
 
 export function VenuesListWithFilter () {
   const [venues, setVenues] = useState(null)
   const [venuesCache, setVenuesCache] = useState({})
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(defaultPageNumber)
   const [amountOfVenues, setAmountOfVenues] = useState(null)
-  const [venuesPerPage, setVenuesPerPage] = useState(18)
+  const [venuesPerPage, setVenuesPerPage] = useState(defaultAmountOfVenuesPerPage)
   const [currencyExchange, setCurrencyExchange] = useState(null)
 
   useEffect(() => {
@@ -48,10 +50,12 @@ export function VenuesListWithFilter () {
     setVenuesCache({})
   }
 
+  const checkIfDataHasBeenProvided = venues && currencyExchange
+
   return (
     <div className={styles.filtersAndVenuesWrap}>
       <FilterList />
-      { venues && currencyExchange
+      { checkIfDataHasBeenProvided
         ? <div className={styles.venuesListWithPagination}>
           <div className={styles.displayAmountOfVenuesAndResetButton}>
             <div className={styles.displayAmountOfVenues}>

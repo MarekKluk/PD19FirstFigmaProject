@@ -1,0 +1,70 @@
+@import "../../../shared/variables/variables.css";
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 692px;
+    margin-top: 190px;
+    margin-bottom: 19px;
+}
+.nameAndRating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nameAndAddress {
+    display: flex;
+    flex-direction: column;
+}
+.nameAndAddress h3 {
+    font-weight: var(--bold-font);
+    font-size: var(--big-font);
+    color: var(--black);
+    margin: 0 0 10px 0;
+}
+.nameAndAddress h4 {
+    font-size: var(--medium-font);
+    color: var(--black);
+    margin: 0;
+}
+.rating p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+    text-align: right;
+    margin-right: 3px;
+}
+.rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigationButtonsWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 16px;
+}
+
+.navigationButton {
+    background: none;
+    border: none;
+    height: 24px;
+    font-style: normal;
+    font-weight: var(--bold-font);
+    color: var(--celadon);
+    cursor: pointer;
+}
+.detailsContainer {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}

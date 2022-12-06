@@ -47,6 +47,13 @@
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.venueBackground {
+    background-size: cover;
+    position: absolute;
+    width: 282px;
+    height: 193px;
+}
+
 .iconAndNameWrap {
     display: flex;
     flex-direction: row;

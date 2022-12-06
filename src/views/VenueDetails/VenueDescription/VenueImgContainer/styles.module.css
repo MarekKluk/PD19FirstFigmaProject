@@ -1,0 +1,29 @@
+@import "../../../../shared/variables/variables.css";
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 8px 0;
+    opacity: 0.99;
+    color: var(--white);
+}
+.venueImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 352px;
+    max-height: 352px;
+}
+
+.venueImg {
+    height: 352px;
+    width: 100%;
+    max-width: 682px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

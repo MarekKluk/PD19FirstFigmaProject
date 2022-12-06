@@ -15,6 +15,7 @@
 }
 .displayAmountOfVenuesAndResetButton {
     width: 100%;
+    max-width: 854px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +35,6 @@
 .sortButton {
     background: none;
     border: none;
-    width: 34px;
     height: 24px;
     font-style: normal;
     font-weight: 600;
@@ -43,7 +43,6 @@
     letter-spacing: 0.03em;
     color: var(--celadon);
     cursor: pointer;
-    margin-right: 100px;
 }
 .venuesPerPageInput {
     text-align: center;
