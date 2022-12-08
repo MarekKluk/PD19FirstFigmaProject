@@ -11,8 +11,7 @@ export function VenueDescription ({ venueDetails }) {
   const [displayComponent, setDisplayComponent] = useState(<Description venueDetails={venueDetails}/>)
 
   let imgsToDisplay = venueDetails.venueDescriptionImgUrls
-  imgsToDisplay = { 0: venueDetails.landingImgUrl, ...imgsToDisplay }
-  imgsToDisplay = Object.values(imgsToDisplay)
+  imgsToDisplay = [venueDetails.landingImgUrl, ...imgsToDisplay]
 
   const handleDescriptionButton = () => {
     setDisplayComponent(<Description venueDetails={venueDetails} />)

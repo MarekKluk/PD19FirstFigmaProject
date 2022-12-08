@@ -15,7 +15,7 @@ export function GalleryDialog (props) {
     () => splicePicturesArray([...props.venuesGallery], props.firstImgIndexToDisplay),
     [props.firstImgIndexToDisplay, props.venuesGallery]
   )
-
+  console.log(pictures)
   return (
     <StyledDialog open={props.open} onClose={props.onClose}>
       <div className={styles.carouselContainer}>

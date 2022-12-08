@@ -4,7 +4,7 @@ import { GalleryDialog } from './GalleryDialog'
 
 export function Gallery ({ venuesGallery }) {
   const [open, setOpen] = useState(false)
-  const [imgIndexToDisplay, setImgIndexToDisplay] = useState(0)
+  const [imgIndexToDisplay, setImgIndexToDisplay] = useState(null)
 
   const handleClickOpen = (index) => {
     setImgIndexToDisplay(index)
@@ -20,7 +20,7 @@ export function Gallery ({ venuesGallery }) {
       <div className={styles.galleryContainer}>
         {venuesGallery.map((picture, index) => (<img src={picture} key={picture} onClick={() => handleClickOpen(index)} />))}
       </div>
-      {imgIndexToDisplay &&
+      {imgIndexToDisplay !== null &&
         <GalleryDialog
           open={open}
           onClose={handleClose}

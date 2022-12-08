@@ -37,7 +37,7 @@ export function VenuesListWithFilter () {
     fetch('https://api.apilayer.com/exchangerates_data/convert?to=PLN&from=EUR&amount=1',
       {
         headers: {
-          apikey: 'NrQIQreA18mCUi76aT6IACgTitJMd8u4'
+          apikey: process.env.REACT_APP_EXCHANGE_CURRENCY_API_KEY
         }
       })
       .then((res) => res.json())

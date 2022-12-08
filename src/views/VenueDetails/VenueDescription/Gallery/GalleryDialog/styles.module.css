@@ -1,4 +1,20 @@
 .carouselContainer {
-    min-width: 682px;
-    max-width: 3000px;
+    max-width: 682px;
+    height: 300px;
 }
+@media (min-width: 800px) {
+    .carouselContainer {
+        height: 400px;
+    }
+}
+@media (min-width: 1000px) {
+    .carouselContainer {
+        height: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .carouselContainer {
+        height: 600px;
+    }
+}
+

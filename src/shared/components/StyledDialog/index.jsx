@@ -3,7 +3,7 @@ import { Dialog } from '@mui/material'
 
 export const StyledDialog = styled(Dialog)(() => ({
   '& .MuiPaper-root': {
-    minWidth: '682px',
-    maxWidth: '3000px'
+    width: '100%',
+    maxWidth: '682px'
   }
 }))

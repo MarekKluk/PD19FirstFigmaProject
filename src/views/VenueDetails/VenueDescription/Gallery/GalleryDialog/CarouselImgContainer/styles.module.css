@@ -20,9 +20,25 @@
 }
 
 .venueImg {
-    height: 100%;
-    min-height: 610px;
+    height: 300px;
     width: 100%;
+    max-width: 682px;
     background-repeat: no-repeat;
     background-position: center;
 }
+@media (min-width: 800px) {
+    .venueImg {
+        height: 400px;
+    }
+}
+@media (min-width: 1000px) {
+    .venueImg {
+        height: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .venueImg {
+        height: 600px;
+    }
+}
+
