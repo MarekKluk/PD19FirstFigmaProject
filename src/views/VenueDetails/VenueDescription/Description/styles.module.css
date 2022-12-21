@@ -1,0 +1,38 @@
+@import "../../../../shared/variables/variables.css";
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 543px;
+    color: var(--black);
+}
+.textDescription {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.textDescription p {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    line-height: 219%;
+}
+.venuesAmenities {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.locationInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 40px 0 50px 0;
+}
+.iconWithDescription {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.iconWithDescription p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 43px;
+}

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { styled } from '@mui/material/styles'
 import { DateRangePicker } from '@mui/x-date-pickers-pro'
 
@@ -7,6 +6,18 @@ export const StyledDataRangePicker = styled(DateRangePicker)(() => ({
     borderRadius: '18px',
     height: 48,
     width: 110,
-    background: 'white'
+    background: 'white',
+    textAlign: 'center'
+  },
+  '& .MuiFormLabel-root': {
+    textAlign: 'center',
+    width: 80
+  },
+  '& .MuiPickersPopper-root': {
+    marginTop: '50px'
+  },
+  '& .css-14lo706': {
+    marginLeft: '15px'
   }
+
 }))

@@ -1,0 +1,44 @@
+@import "../../../../../../shared/variables/variables.css";
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 8px 0;
+    opacity: 0.99;
+    color: var(--white);
+}
+.venueImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.venueImg {
+    height: 300px;
+    width: 100%;
+    max-width: 682px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 800px) {
+    .venueImg {
+        height: 400px;
+    }
+}
+@media (min-width: 1000px) {
+    .venueImg {
+        height: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .venueImg {
+        height: 600px;
+    }
+}
+
