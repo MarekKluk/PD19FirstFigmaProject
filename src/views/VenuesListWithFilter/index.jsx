@@ -6,7 +6,7 @@ import { Pagination } from '@mui/material'
 import { FilterList } from './FilterList'
 
 const venuesUrl = 'https://my-json-server.typicode.com/marekkluk/figma-json/venues'
-const defaultAmountOfVenuesPerPage = 18
+const defaultAmountOfVenuesPerPage = 6
 const defaultPageNumber = 1
 
 export function VenuesListWithFilter () {
