@@ -18,7 +18,7 @@ export function SearchBox () {
 
   useEffect(() => {
     async function fetchLocalizations () {
-      const response = await fetch('http://localhost:3000/localizationOptions')
+      const response = await fetch('https://my-json-server.typicode.com/marekkluk/figma-json/localizationOptions')
       const localizationsArray = await response.json()
       setLocalizationOptions(localizationsArray)
     }

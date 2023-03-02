@@ -1,5 +1,5 @@
 export const linkPaths = {
-  home: '/',
+  home: '/PD19FirstFigmaProject',
   about: '/about',
   favourites: '/your-favourites',
   hosting: '/start-hosting',

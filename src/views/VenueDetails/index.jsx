@@ -5,7 +5,7 @@ import { VenueDescription } from './VenueDescription'
 import { BookVenue } from './BookVenue'
 import styles from './styles.module.css'
 
-const baseVenueDetailsUrl = 'http://localhost:3000/venuesDetails'
+const baseVenueDetailsUrl = 'https://my-json-server.typicode.com/marekkluk/figma-json/venuesDetails'
 
 export function VenueDetails () {
   const [venueDetails, setVenueDetails] = useState(null)
